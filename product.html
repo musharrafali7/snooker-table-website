@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_standard" name="shell-type" />
+  <title>The Club Classic — Tournament Snooker Table Specifications</title>
+
+  <!-- Google Fonts Preconnect -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Tailwind CSS CDN & Custom Scripts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/script.js"></script>
+</head>
+<body class="bg-primary-container text-white font-body-md">
+
+  <!-- Header Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#4A2E1B] border-b-2 border-primary-container">
+    <div class="h-20 w-full px-gutter flex items-center justify-between">
+      <div class="flex items-center gap-space-sm">
+        <a href="index.html" class="flex items-center gap-space-sm">
+          <img
+            alt="The Club Classic Logo"
+            class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1UFHktqDuTqOZuleyqZTELKEe_HnXf8UHbxIAjc1_WvirC18zXeUk6nnmBO29eWik7MJGCVKRWssvbh8FPHsOCE74X6ifACK493bw9TbOvJmYORwgRpuJbMIng93TVd3A0laG1oJfkwQWWR1ThEOCvzEsjqsiLUxl_fHLFv5hXN1p3P1evjAxx7zQjXxkFfru6yuY71zgaX66vEQmXcSGMW0mcRI6M7c-6FGvCNf5Br3O22yzHUiJfYSw4z"
+          />
+          <span class="font-headline-sm text-headline-sm text-white tracking-widest uppercase">CLUB CLASSIC</span>
+        </a>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-space-lg" data-active-classes="border-b border-white text-white">
+        <a class="font-label-md text-label-md uppercase tracking-[0.2em] text-white hover:text-primary-fixed-dim transition-colors py-1" data-path="home" href="index.html">Home</a>
+        <a aria-current="page" class="font-label-md uppercase tracking-[0.2em] transition-colors py-1 border-b border-white text-white" data-path="product" href="product.html">Product</a>
+        <a class="font-label-md text-label-md uppercase tracking-[0.2em] text-white hover:text-primary-fixed-dim transition-colors py-1" data-path="order" href="order.html">Order</a>
+      </nav>
+
+      <div class="flex items-center gap-space-sm">
+        <a class="bg-primary-container text-white font-label-lg text-label-lg uppercase px-space-md py-space-xs rounded-lg border border-white hover:bg-white hover:text-on-primary transition-all" data-path="order" href="order.html">Buy Now</a>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="w-full pt-20 bg-primary-container min-h-screen">
+    <div class="flex flex-col w-full">
+
+      <!-- Breadcrumbs -->
+      <section class="w-full bg-[#153828] border-b border-white/10 px-gutter py-3">
+        <div class="max-w-7xl mx-auto flex items-center gap-2 text-white/70 font-label-sm text-label-sm uppercase tracking-[0.2em]">
+          <a href="index.html" class="hover:text-white transition-colors">Home</a>
+          <span class="text-white/40">/</span>
+          <a href="product.html" class="text-white">Product Overview</a>
+          <span class="text-white/40">/</span>
+          <span class="text-primary-fixed">The Club Classic 12ft Championship</span>
+        </div>
+      </section>
+
+      <!-- Product Showcase & Selection Section -->
+      <section class="w-full bg-primary-container text-white px-gutter py-space-lg relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg lg:gap-space-xl items-start">
+          
+          <!-- Left: Multi-view Gallery & Media Preview -->
+          <div class="lg:col-span-7 flex flex-col space-y-space-sm">
+            <!-- Main Hero Image Viewport -->
+            <div class="relative w-full overflow-hidden rounded-xl bg-secondary-container/20 p-2 sm:p-4 border border-white/10 shadow-2xl">
+              <img
+                id="main-product-image"
+                alt="The Club Classic tournament snooker table"
+                class="w-full h-auto object-cover rounded-lg aspect-[16/10] shadow-2xl transition-all duration-300"
+                src="table.png"
+              />
+              <div class="absolute top-6 left-6 bg-secondary-container/90 backdrop-blur px-3 py-1.5 rounded flex items-center gap-2 border border-white/20">
+                <span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+                <span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-white">WPBSA Regulation Approved</span>
+              </div>
+            </div>
+
+            <!-- Thumbnail Selector Strip -->
+            <div class="grid grid-cols-4 gap-space-xs sm:gap-space-sm pt-2">
+              <button
+                onclick="changeImage(this, 'table.png')"
+                class="thumbnail-btn border-2 border-primary-fixed rounded-lg p-1 bg-secondary-container/40 hover:opacity-100 transition-all"
+              >
+                <div class="aspect-video bg-black/40 rounded flex flex-col items-center justify-center text-center p-1">
+                  <span class="material-symbols-outlined text-sm text-primary-fixed">sports_esports</span>
+                  <span class="font-label-sm text-[8px] uppercase tracking-wider block mt-1">Full Table</span>
+                </div>
+              </button>
+
+              <button
+                onclick="changeImage(this, 'table.png')"
+                class="thumbnail-btn border border-white/20 rounded-lg p-1 bg-secondary-container/40 opacity-70 hover:opacity-100 transition-all"
+              >
+                <div class="aspect-video bg-black/40 rounded flex flex-col items-center justify-center text-center p-1">
+                  <span class="material-symbols-outlined text-sm text-primary-fixed">layers</span>
+                  <span class="font-label-sm text-[8px] uppercase tracking-wider block mt-1">45mm Slate</span>
+                </div>
+              </button>
+
+              <button
+                onclick="changeImage(this, 'table.png')"
+                class="thumbnail-btn border border-white/20 rounded-lg p-1 bg-secondary-container/40 opacity-70 hover:opacity-100 transition-all"
+              >
+                <div class="aspect-video bg-black/40 rounded flex flex-col items-center justify-center text-center p-1">
+                  <span class="material-symbols-outlined text-sm text-primary-fixed">texture</span>
+                  <span class="font-label-sm text-[8px] uppercase tracking-wider block mt-1">Strachan Felt</span>
+                </div>
+              </button>
+
+              <button
+                onclick="changeImage(this, 'table.png')"
+                class="thumbnail-btn border border-white/20 rounded-lg p-1 bg-secondary-container/40 opacity-70 hover:opacity-100 transition-all"
+              >
+                <div class="aspect-video bg-black/40 rounded flex flex-col items-center justify-center text-center p-1">
+                  <span class="material-symbols-outlined text-sm text-primary-fixed">carpenter</span>
+                  <span class="font-label-sm text-[8px] uppercase tracking-wider block mt-1">Solid Brass</span>
+                </div>
+              </button>
+            </div>
+
+            <!-- Guarantee Highlights -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-sm">
+              <div class="bg-secondary-container/40 border border-white/10 p-4 rounded-lg flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary-fixed text-2xl">verified_user</span>
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase tracking-[0.15em] block text-white">10-Year Warranty</span>
+                  <span class="text-xs text-white/70">Solid oak &amp; slate frame</span>
+                </div>
+              </div>
+              <div class="bg-secondary-container/40 border border-white/10 p-4 rounded-lg flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary-fixed text-2xl">local_shipping</span>
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase tracking-[0.15em] block text-white">Free Setup</span>
+                  <span class="text-xs text-white/70">Master 2-man laser install</span>
+                </div>
+              </div>
+              <div class="bg-secondary-container/40 border border-white/10 p-4 rounded-lg flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary-fixed text-2xl">award_star</span>
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase tracking-[0.15em] block text-white">WPBSA Grade</span>
+                  <span class="text-xs text-white/70">Match-level calibration</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Product Narrative, Specs & Acquisition Actions -->
+          <div class="lg:col-span-5 flex flex-col space-y-space-md bg-secondary-container/30 border border-white/10 p-space-md sm:p-space-lg rounded-xl">
+            <!-- Eyebrow & Ratings -->
+            <div class="flex items-center justify-between flex-wrap gap-2">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+                <span class="font-label-md text-label-md uppercase tracking-[0.25em] text-white/90">HANDCRAFTED IN SHEFFIELD</span>
+              </div>
+              <div class="flex items-center gap-1 text-secondary-fixed">
+                <span class="material-symbols-outlined text-base">star</span>
+                <span class="material-symbols-outlined text-base">star</span>
+                <span class="material-symbols-outlined text-base">star</span>
+                <span class="material-symbols-outlined text-base">star</span>
+                <span class="material-symbols-outlined text-base">star</span>
+                <span class="text-xs text-white/80 ml-1 font-label-sm">5.0 (48 Clubs)</span>
+              </div>
+            </div>
+
+            <!-- Title & Subtitle -->
+            <div>
+              <h1 class="font-headline-lg text-headline-lg text-white font-normal leading-tight">
+                The Club Classic
+              </h1>
+              <p class="font-body-md text-body-md text-white/80 mt-1">
+                Full-size 12ft Championship Snooker Table engineered with 45mm 5-piece Italian slate, solid English oak structure, and Strachan 6811 pure wool worsted felt.
+              </p>
+            </div>
+
+            <!-- Price Display -->
+            <div class="bg-primary-container/80 p-4 rounded-lg border border-white/10 flex items-center justify-between">
+              <div>
+                <div class="flex items-baseline gap-2">
+                  <span class="font-display-lg text-[38px] leading-tight font-normal text-white">$3,499</span>
+                  <span class="font-label-md text-label-md uppercase tracking-[0.2em] text-white/70">USD</span>
+                </div>
+                <span class="text-xs text-primary-fixed tracking-wider uppercase block">White-Glove Delivery &amp; Levelling Included</span>
+              </div>
+              <div class="text-right">
+                <span class="font-label-sm text-[10px] uppercase tracking-[0.15em] bg-secondary-container px-2.5 py-1 rounded text-white border border-white/20">
+                  Ready to Craft
+                </span>
+                <span class="text-[11px] text-white/60 block mt-1">4-6 Week Lead Time</span>
+              </div>
+            </div>
+
+            <!-- Configuration Options Preview -->
+            <div class="space-y-4 pt-2 border-t border-white/10">
+              <!-- Dimension Choice -->
+              <div>
+                <label class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-white/80 block mb-2">
+                  Table Size Specification
+                </label>
+                <div class="grid grid-cols-3 gap-2 text-center">
+                  <div class="border-2 border-primary-fixed bg-primary-container p-2 rounded-lg cursor-pointer">
+                    <span class="font-label-sm text-xs font-semibold block text-white">12 × 6 ft</span>
+                    <span class="text-[10px] text-white/70">Championship</span>
+                  </div>
+                  <div class="border border-white/20 bg-secondary-container/40 p-2 rounded-lg opacity-80 cursor-pointer hover:border-white">
+                    <span class="font-label-sm text-xs font-semibold block text-white">10 × 5 ft</span>
+                    <span class="text-[10px] text-white/70">Estate Size</span>
+                  </div>
+                  <div class="border border-white/20 bg-secondary-container/40 p-2 rounded-lg opacity-80 cursor-pointer hover:border-white">
+                    <span class="font-label-sm text-xs font-semibold block text-white">9 × 4.5 ft</span>
+                    <span class="text-[10px] text-white/70">Club Compact</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Wood Stain -->
+              <div>
+                <label class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-white/80 block mb-2">
+                  Wood Finish: <span class="text-primary-fixed font-normal">Rich Mahogany</span>
+                </label>
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-[#4A2E1B] border-2 border-white ring-2 ring-primary-fixed cursor-pointer" title="Rich Mahogany"></div>
+                  <div class="w-8 h-8 rounded-full bg-[#8B5A2B] border border-white/40 cursor-pointer hover:scale-105 transition-transform" title="English Oak"></div>
+                  <div class="w-8 h-8 rounded-full bg-[#2C1810] border border-white/40 cursor-pointer hover:scale-105 transition-transform" title="Antique Walnut"></div>
+                  <div class="w-8 h-8 rounded-full bg-[#111111] border border-white/40 cursor-pointer hover:scale-105 transition-transform" title="Piano Onyx"></div>
+                </div>
+              </div>
+
+              <!-- Cloth Color -->
+              <div>
+                <label class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-white/80 block mb-2">
+                  Cloth Selection: <span class="text-primary-fixed font-normal">Tournament Green</span>
+                </label>
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-[#0b3726] border-2 border-white ring-2 ring-primary-fixed cursor-pointer" title="Tournament Green"></div>
+                  <div class="w-8 h-8 rounded-full bg-[#1b3b6f] border border-white/40 cursor-pointer hover:scale-105 transition-transform" title="Royal Blue"></div>
+                  <div class="w-8 h-8 rounded-full bg-[#5c1d24] border border-white/40 cursor-pointer hover:scale-105 transition-transform" title="Burgundy Red"></div>
+                  <div class="w-8 h-8 rounded-full bg-[#353535] border border-white/40 cursor-pointer hover:scale-105 transition-transform" title="Traditional Charcoal"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action CTAs -->
+            <div class="pt-2 flex flex-col sm:flex-row gap-3">
+              <a
+                class="flex-1 inline-flex items-center justify-center gap-3 bg-secondary-container text-white font-label-lg text-label-lg uppercase tracking-[0.2em] px-6 py-4 rounded-lg hover:bg-white hover:text-on-primary transition-all duration-150 group text-center shadow-lg"
+                data-path="order"
+                href="order.html"
+              >
+                <span>Configure &amp; Order</span>
+                <span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+              </a>
+              <a
+                class="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-label-lg text-label-lg uppercase tracking-[0.2em] px-5 py-4 rounded-lg hover:bg-white/10 transition-all text-center"
+                href="#specifications-breakdown"
+              >
+                <span>Full Specs</span>
+                <span class="material-symbols-outlined text-base">expand_more</span>
+              </a>
+            </div>
+
+            <!-- Specialist Contact -->
+            <div class="flex items-center gap-2 text-xs text-white/70 pt-1">
+              <span class="material-symbols-outlined text-sm text-primary-fixed">call</span>
+              <span>Need custom sizing or architectural guidance? <strong>Call 1-800-CLUB-SNOOKER</strong></span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Engineering & Craftsmanship Deep Dive -->
+      <section class="w-full bg-secondary-container text-white px-gutter py-space-xl border-t border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-col space-y-space-lg">
+          
+          <div class="max-w-3xl">
+            <span class="font-label-md text-label-md uppercase tracking-[0.25em] text-white/70 block mb-2">PRECISION ARCHITECTURE</span>
+            <h2 class="font-headline-lg text-headline-lg font-normal text-white">
+              Anatomy of a Championship Table
+            </h2>
+            <p class="font-body-lg text-body-lg text-white/80 mt-2">
+              Every detail is manufactured to tournament standards. From hand-planed Italian slate to high-resilience Northern Rubber, our tables withstand generations of championship play.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+            
+            <!-- Pillar 1 -->
+            <div class="bg-primary-container p-space-md rounded-xl border border-white/10 flex flex-col justify-between space-y-4">
+              <div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center">
+                <span class="material-symbols-outlined text-white text-2xl">layers</span>
+              </div>
+              <div>
+                <h3 class="font-headline-sm text-headline-sm text-white mb-2">45mm Italian Slate</h3>
+                <p class="font-body-sm text-body-sm text-white/80 leading-relaxed">
+                  Five matched slabs extracted from Liguria, Italy, diamond-honed to a tolerance of 0.1mm. Bolted securely through the oak undercarriage to prevent settling.
+                </p>
+              </div>
+              <div class="pt-2 border-t border-white/10">
+                <span class="font-label-sm text-[11px] uppercase tracking-wider text-primary-fixed">5-Piece Matched Slab</span>
+              </div>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="bg-primary-container p-space-md rounded-xl border border-white/10 flex flex-col justify-between space-y-4">
+              <div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center">
+                <span class="material-symbols-outlined text-white text-2xl">texture</span>
+              </div>
+              <div>
+                <h3 class="font-headline-sm text-headline-sm text-white mb-2">Strachan 6811 Wool</h3>
+                <p class="font-body-sm text-body-sm text-white/80 leading-relaxed">
+                  The official cloth of the World Snooker Tour. 100% fine British worsted wool cloth giving true ball velocity, uniform nap response, and resistance to ball burns.
+                </p>
+              </div>
+              <div class="pt-2 border-t border-white/10">
+                <span class="font-label-sm text-[11px] uppercase tracking-wider text-primary-fixed">32oz Championship Nap</span>
+              </div>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="bg-primary-container p-space-md rounded-xl border border-white/10 flex flex-col justify-between space-y-4">
+              <div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center">
+                <span class="material-symbols-outlined text-white text-2xl">sports_baseball</span>
+              </div>
+              <div>
+                <h3 class="font-headline-sm text-headline-sm text-white mb-2">Northern Rubber</h3>
+                <p class="font-body-sm text-body-sm text-white/80 leading-relaxed">
+                  Extruded in England using proprietary vulcanized rubber compound. Delivers predictable 42-degree angular bounce and true dynamic return shot after shot.
+                </p>
+              </div>
+              <div class="pt-2 border-t border-white/10">
+                <span class="font-label-sm text-[11px] uppercase tracking-wider text-primary-fixed">Formula #1 Cushion Profile</span>
+              </div>
+            </div>
+
+            <!-- Pillar 4 -->
+            <div class="bg-primary-container p-space-md rounded-xl border border-white/10 flex flex-col justify-between space-y-4">
+              <div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center">
+                <span class="material-symbols-outlined text-white text-2xl">carpenter</span>
+              </div>
+              <div>
+                <h3 class="font-headline-sm text-headline-sm text-white mb-2">Solid English Oak</h3>
+                <p class="font-body-sm text-body-sm text-white/80 leading-relaxed">
+                  Selected quarter-sawn English oak legs and rails. Mortise-and-tenon construction supporting a gross operational weight of 1,150 kg without deflection.
+                </p>
+              </div>
+              <div class="pt-2 border-t border-white/10">
+                <span class="font-label-sm text-[11px] uppercase tracking-wider text-primary-fixed">Mortise &amp; Tenon Joinery</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Full Technical Specifications Breakdown -->
+      <section class="w-full bg-primary-container text-white px-gutter py-space-xl" id="specifications-breakdown">
+        <div class="max-w-7xl mx-auto flex flex-col space-y-space-md">
+          
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm pb-space-xs">
+            <div>
+              <span class="font-label-md text-label-md uppercase tracking-[0.25em] text-white/70 block mb-2">TECHNICAL DOSSIER</span>
+              <h2 class="font-headline-lg text-headline-lg font-normal text-white">Full Table Specifications</h2>
+            </div>
+            <a
+              href="order.html"
+              class="inline-flex items-center gap-2 text-primary-fixed font-label-md text-label-md uppercase tracking-[0.2em] hover:underline"
+            >
+              <span>Order Custom Specification</span>
+              <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+
+          <!-- Specs Matrix -->
+          <div class="overflow-x-auto bg-secondary-container/40 rounded-xl border border-white/10 p-2 sm:p-4">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b border-white/15">
+                  <th class="py-4 px-4 font-label-md text-label-md uppercase tracking-[0.2em] text-primary-fixed">Attribute</th>
+                  <th class="py-4 px-4 font-label-md text-label-md uppercase tracking-[0.2em] text-white">12 × 6 ft (Championship)</th>
+                  <th class="py-4 px-4 font-label-md text-label-md uppercase tracking-[0.2em] text-white/80">10 × 5 ft (Estate)</th>
+                  <th class="py-4 px-4 font-label-md text-label-md uppercase tracking-[0.2em] text-white/80">9 × 4.5 ft (Club)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-white/10 font-body-sm text-body-sm">
+                <tr>
+                  <td class="py-3.5 px-4 font-medium text-white/90">Playing Surface Area</td>
+                  <td class="py-3.5 px-4 text-white">3569 mm × 1778 mm (11' 8.5" × 5' 10")</td>
+                  <td class="py-3.5 px-4 text-white/70">2946 mm × 1473 mm (9' 8" × 4' 10")</td>
+                  <td class="py-3.5 px-4 text-white/70">2642 mm × 1321 mm (8' 8" × 4' 4")</td>
+                </tr>
+                <tr>
+                  <td class="py-3.5 px-4 font-medium text-white/90">Overall Outer Dimensions</td>
+                  <td class="py-3.5 px-4 text-white">3820 mm × 2040 mm × 850 mm</td>
+                  <td class="py-3.5 px-4 text-white/70">3200 mm × 1730 mm × 850 mm</td>
+                  <td class="py-3.5 px-4 text-white/70">2890 mm × 1570 mm × 850 mm</td>
+                </tr>
+                <tr>
+                  <td class="py-3.5 px-4 font-medium text-white/90">Gross Mass / Total Weight</td>
+                  <td class="py-3.5 px-4 text-white">1,150 kg (2,535 lbs)</td>
+                  <td class="py-3.5 px-4 text-white/70">890 kg (1,960 lbs)</td>
+                  <td class="py-3.5 px-4 text-white/70">720 kg (1,585 lbs)</td>
+                </tr>
+                <tr>
+                  <td class="py-3.5 px-4 font-medium text-white/90">Slate Bed Construction</td>
+                  <td class="py-3.5 px-4 text-white">45mm 5-piece diamond-honed Italian slate</td>
+                  <td class="py-3.5 px-4 text-white/70">38mm 5-piece diamond-honed Italian slate</td>
+                  <td class="py-3.5 px-4 text-white/70">32mm 3-piece diamond-honed Italian slate</td>
+                </tr>
+                <tr>
+                  <td class="py-3.5 px-4 font-medium text-white/90">Cushion Profile</td>
+                  <td class="py-3.5 px-4 text-white">Northern Rubber Championship Steel Block (WPBSA)</td>
+                  <td class="py-3.5 px-4 text-white/70">Northern Rubber Match Cushion</td>
+                  <td class="py-3.5 px-4 text-white/70">Northern Rubber Club Cushion</td>
+                </tr>
+                <tr>
+                  <td class="py-3.5 px-4 font-medium text-white/90">Pocket Assemblies</td>
+                  <td class="py-3.5 px-4 text-white">Hand-stitched English bridle leather &amp; brass tracks</td>
+                  <td class="py-3.5 px-4 text-white/70">Bridle leather &amp; brass tracks</td>
+                  <td class="py-3.5 px-4 text-white/70">Bridle leather &amp; brass tracks</td>
+                </tr>
+                <tr>
+                  <td class="py-3.5 px-4 font-medium text-white/90">Recommended Room Size</td>
+                  <td class="py-3.5 px-4 text-white">22 ft × 16 ft (6.7 m × 4.9 m)</td>
+                  <td class="py-3.5 px-4 text-white/70">20 ft × 15 ft (6.1 m × 4.6 m)</td>
+                  <td class="py-3.5 px-4 text-white/70">19 ft × 14.5 ft (5.8 m × 4.4 m)</td>
+                </tr>
+                <tr>
+                  <td class="py-3.5 px-4 font-medium text-white/90">Origin &amp; Certification</td>
+                  <td class="py-3.5 px-4 text-white">Sheffield, UK • Certified WPBSA Guidelines</td>
+                  <td class="py-3.5 px-4 text-white/70">Sheffield, UK • Certified</td>
+                  <td class="py-3.5 px-4 text-white/70">Sheffield, UK • Certified</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Included Accessories Suite Section ($850 value) -->
+      <section class="w-full bg-secondary-container text-white px-gutter py-space-xl border-t border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-col space-y-space-lg">
+          
+          <div class="text-center max-w-2xl mx-auto">
+            <span class="font-label-md text-label-md uppercase tracking-[0.25em] text-white/70 block mb-2">COMPLIMENTARY SUITE</span>
+            <h2 class="font-headline-lg text-headline-lg font-normal text-white">
+              The White-Glove Accessory Package
+            </h2>
+            <p class="font-body-md text-body-md text-white/80 mt-2">
+              Every table arrives with an $850 championship accessory collection at zero additional cost, ready for competition play upon installation.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-md">
+            
+            <div class="bg-primary-container p-space-md rounded-xl border border-white/10 flex items-start gap-4">
+              <span class="material-symbols-outlined text-primary-fixed text-3xl">sports</span>
+              <div>
+                <h4 class="font-headline-sm text-headline-sm text-white">Aramith 1G Ball Set</h4>
+                <p class="font-body-sm text-body-sm text-white/70 mt-1">
+                  Phenolic resin balls calibrated to within 1-gram weight tolerance across all 22 balls for absolute purity of roll.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-primary-container p-space-md rounded-xl border border-white/10 flex items-start gap-4">
+              <span class="material-symbols-outlined text-primary-fixed text-3xl">sports_martial_arts</span>
+              <div>
+                <h4 class="font-headline-sm text-headline-sm text-white">4 Match Ash Cues</h4>
+                <p class="font-body-sm text-body-sm text-white/70 mt-1">
+                  Hand-spliced English ash 3/4-joint match cues with quick-release brass joints, mini-butts, and telescopic extensions.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-primary-container p-space-md rounded-xl border border-white/10 flex items-start gap-4">
+              <span class="material-symbols-outlined text-primary-fixed text-3xl">architecture</span>
+              <div>
+                <h4 class="font-headline-sm text-headline-sm text-white">Full Rest Stick Ensemble</h4>
+                <p class="font-body-sm text-body-sm text-white/70 mt-1">
+                  Includes brass cross rest, high spider, and swan-neck rest mounted on seasoned ash shafts with butt rests.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-primary-container p-space-md rounded-xl border border-white/10 flex items-start gap-4">
+              <span class="material-symbols-outlined text-primary-fixed text-3xl">table_restaurant</span>
+              <div>
+                <h4 class="font-headline-sm text-headline-sm text-white">Solid Oak Wall Cue Rack</h4>
+                <p class="font-body-sm text-body-sm text-white/70 mt-1">
+                  Wall-mounted 6-cue rack hand-finished in matching timber stain with brass spring clips and integrated chalk shelf.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-primary-container p-space-md rounded-xl border border-white/10 flex items-start gap-4">
+              <span class="material-symbols-outlined text-primary-fixed text-3xl">brush</span>
+              <div>
+                <h4 class="font-headline-sm text-headline-sm text-white">Strachan Table Care Suite</h4>
+                <p class="font-body-sm text-body-sm text-white/70 mt-1">
+                  Pure horsehair nap brush, professional thermostatically-controlled Dowsing iron, and custom heavy-duty dust cover.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-primary-container p-space-md rounded-xl border border-white/10 flex items-start gap-4">
+              <span class="material-symbols-outlined text-primary-fixed text-3xl">change_history</span>
+              <div>
+                <h4 class="font-headline-sm text-headline-sm text-white">Triangle &amp; Marking Kit</h4>
+                <p class="font-body-sm text-body-sm text-white/70 mt-1">
+                  Solid oak ball rack triangle, magnetic cue ball marker, tournament Baulk line marker tape, and spot stickers.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Bottom Conversion Banner -->
+      <section class="w-full bg-primary-container text-white px-gutter py-space-xl">
+        <div class="max-w-7xl mx-auto">
+          <div class="bg-secondary-container p-space-lg sm:p-space-xl rounded-xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-space-lg">
+            <div class="flex flex-col space-y-space-sm max-w-2xl z-10 text-left">
+              <span class="font-label-md text-label-md uppercase tracking-[0.25em] text-white/80">RESERVE YOUR COMMISSION</span>
+              <h2 class="font-headline-lg text-headline-lg font-normal text-white">
+                Begin Your Bespoke Table Build
+              </h2>
+              <p class="font-body-lg text-body-lg text-white/90 leading-relaxed">
+                Configure your timber finish, felt cloth, and arrange personal white-glove delivery with our master table technicians.
+              </p>
+            </div>
+            <div class="flex flex-col items-center lg:items-end space-y-space-xs w-full lg:w-auto z-10">
+              <a
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-primary-container text-white font-label-lg text-label-lg uppercase tracking-[0.2em] px-10 py-5 rounded-lg hover:bg-white hover:text-on-primary transition-all duration-150 shadow-xl group text-center"
+                data-path="order"
+                href="order.html"
+              >
+                <span>Proceed to Order Page • $3,499</span>
+                <span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+              </a>
+              <span class="font-label-sm text-label-sm uppercase tracking-[0.15em] text-white/70 pt-2">
+                White-glove delivery &amp; assembly included nationwide
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="w-full bg-[#4A2E1B] border-t border-white/20">
+    <div class="w-full px-gutter py-space-sm flex items-center justify-center text-center">
+      <p class="font-body-sm text-body-sm text-white tracking-wider">
+        © 2025 The Club Classic. Precision Crafted Snooker Tables. Free White-Glove Installation.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
