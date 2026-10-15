@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_standard" name="shell-type" />
+  <title>Commission Your Table — The Club Classic</title>
+
+  <!-- Google Fonts Preconnect -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Tailwind CSS CDN & Custom Scripts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/script.js"></script>
+</head>
+<body class="bg-primary-container text-white font-body-md">
+
+  <!-- Header Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#4A2E1B] border-b-2 border-primary-container">
+    <div class="h-20 w-full px-gutter flex items-center justify-between">
+      <div class="flex items-center gap-space-sm">
+        <a href="index.html" class="flex items-center gap-space-sm">
+          <img
+            alt="The Club Classic Logo"
+            class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1UFHktqDuTqOZuleyqZTELKEe_HnXf8UHbxIAjc1_WvirC18zXeUk6nnmBO29eWik7MJGCVKRWssvbh8FPHsOCE74X6ifACK493bw9TbOvJmYORwgRpuJbMIng93TVd3A0laG1oJfkwQWWR1ThEOCvzEsjqsiLUxl_fHLFv5hXN1p3P1evjAxx7zQjXxkFfru6yuY71zgaX66vEQmXcSGMW0mcRI6M7c-6FGvCNf5Br3O22yzHUiJfYSw4z"
+          />
+          <span class="font-headline-sm text-headline-sm text-white tracking-widest uppercase">CLUB CLASSIC</span>
+        </a>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-space-lg" data-active-classes="border-b border-white text-white">
+        <a class="font-label-md text-label-md uppercase tracking-[0.2em] text-white hover:text-primary-fixed-dim transition-colors py-1" data-path="home" href="index.html">Home</a>
+        <a class="font-label-md text-label-md uppercase tracking-[0.2em] text-white hover:text-primary-fixed-dim transition-colors py-1" data-path="product" href="product.html">Product</a>
+        <a aria-current="page" class="font-label-md uppercase tracking-[0.2em] transition-colors py-1 border-b border-white text-white" data-path="order" href="order.html">Order</a>
+      </nav>
+
+      <div class="flex items-center gap-space-sm">
+        <a class="bg-primary-container text-white font-label-lg text-label-lg uppercase px-space-md py-space-xs rounded-lg border border-white hover:bg-white hover:text-on-primary transition-all" data-path="order" href="order.html">Buy Now</a>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="w-full pt-20 bg-primary-container min-h-screen">
+    <div class="flex flex-col w-full">
+
+      <!-- Breadcrumb Bar -->
+      <section class="w-full bg-[#153828] border-b border-white/10 px-gutter py-3">
+        <div class="max-w-7xl mx-auto flex items-center gap-2 text-white/70 font-label-sm text-label-sm uppercase tracking-[0.2em]">
+          <a href="index.html" class="hover:text-white transition-colors">Home</a>
+          <span class="text-white/40">/</span>
+          <a href="product.html" class="hover:text-white transition-colors">Product</a>
+          <span class="text-white/40">/</span>
+          <span class="text-primary-fixed">Commission &amp; Order</span>
+        </div>
+      </section>
+
+      <!-- Main Order Form & Live Summary Section -->
+      <section class="w-full bg-primary-container text-white px-gutter py-space-lg">
+        <div class="max-w-7xl mx-auto">
+          
+          <!-- Page Heading -->
+          <div class="mb-space-md text-left">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+              <span class="font-label-md text-label-md uppercase tracking-[0.25em] text-white/90">
+                DIRECT CRAFTSMAN COMMISSION
+              </span>
+            </div>
+            <h1 class="font-headline-lg text-headline-lg text-white font-normal">
+              Order Your Custom Snooker Table
+            </h1>
+            <p class="font-body-md text-body-md text-white/80 max-w-2xl mt-1">
+              Configure your table specifications, personalize timber and cloth finishes, and reserve certified two-man white-glove installation.
+            </p>
+          </div>
+
+          <form id="order-form" onsubmit="handleOrderSubmit(event)">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+              
+              <!-- Left Column: Step-by-Step Customizer & Delivery Form -->
+              <div class="lg:col-span-7 flex flex-col space-y-space-md">
+
+                <!-- Step 1: Specification & Custom Finishes -->
+                <div class="bg-secondary-container/30 border border-white/10 p-space-md sm:p-space-lg rounded-xl">
+                  <div class="flex items-center gap-3 mb-space-sm border-b border-white/10 pb-3">
+                    <span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xs">1</span>
+                    <h2 class="font-headline-sm text-headline-sm text-white">Select Table Specifications</h2>
+                  </div>
+
+                  <!-- Size Selection -->
+                  <div class="space-y-3 mb-6">
+                    <label class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-white/90 block">
+                      Table Dimension (WPBSA Standard):
+                    </label>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                      <label class="size-card cursor-pointer border-2 border-primary-fixed bg-primary-container p-3.5 rounded-lg flex flex-col justify-between transition-all">
+                        <input type="radio" name="table_size" value="12ft" data-name="12 × 6 ft Championship Standard" data-price="3499" checked class="hidden" onchange="updateSummary()" />
+                        <div>
+                          <span class="font-headline-sm text-base text-white block">12 × 6 ft</span>
+                          <span class="text-xs text-primary-fixed font-medium">Championship Standard</span>
+                          <p class="text-[11px] text-white/70 mt-1">Official WPBSA tournament size. 45mm 5-pc slate.</p>
+                        </div>
+                        <div class="mt-3 pt-2 border-t border-white/10 font-bold text-white text-sm">
+                          $3,499 USD
+                        </div>
+                      </label>
+
+                      <label class="size-card cursor-pointer border border-white/20 bg-secondary-container/40 p-3.5 rounded-lg flex flex-col justify-between opacity-80 hover:opacity-100 hover:border-white transition-all">
+                        <input type="radio" name="table_size" value="10ft" data-name="10 × 5 ft Estate Pro" data-price="3199" class="hidden" onchange="updateSummary()" />
+                        <div>
+                          <span class="font-headline-sm text-base text-white block">10 × 5 ft</span>
+                          <span class="text-xs text-white/80 font-medium">Estate Pro</span>
+                          <p class="text-[11px] text-white/70 mt-1">Ideal for stately residences and club parlours.</p>
+                        </div>
+                        <div class="mt-3 pt-2 border-t border-white/10 font-bold text-white text-sm">
+                          $3,199 USD
+                        </div>
+                      </label>
+
+                      <label class="size-card cursor-pointer border border-white/20 bg-secondary-container/40 p-3.5 rounded-lg flex flex-col justify-between opacity-80 hover:opacity-100 hover:border-white transition-all">
+                        <input type="radio" name="table_size" value="9ft" data-name="9 × 4.5 ft Club Room Compact" data-price="2899" class="hidden" onchange="updateSummary()" />
+                        <div>
+                          <span class="font-headline-sm text-base text-white block">9 × 4.5 ft</span>
+                          <span class="text-xs text-white/80 font-medium">Club Compact</span>
+                          <p class="text-[11px] text-white/70 mt-1">Precision proportions for smaller room profiles.</p>
+                        </div>
+                        <div class="mt-3 pt-2 border-t border-white/10 font-bold text-white text-sm">
+                          $2,899 USD
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Wood Stain Selection -->
+                  <div class="space-y-3 mb-6">
+                    <label class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-white/90 block">
+                      Timber Finish: <span id="label-wood-finish" class="text-primary-fixed font-normal lowercase capitalize">Rich Mahogany</span>
+                    </label>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                      <label class="wood-card cursor-pointer border-2 border-primary-fixed bg-primary-container p-2.5 rounded-lg flex items-center gap-2.5 transition-all">
+                        <input type="radio" name="wood_finish" value="Rich Mahogany" checked class="hidden" onchange="updateSummary()" />
+                        <span class="w-6 h-6 rounded-full bg-[#4A2E1B] border border-white/40 shrink-0"></span>
+                        <span class="text-xs text-white font-medium">Rich Mahogany</span>
+                      </label>
+
+                      <label class="wood-card cursor-pointer border border-white/20 bg-secondary-container/40 p-2.5 rounded-lg flex items-center gap-2.5 opacity-80 hover:opacity-100 hover:border-white transition-all">
+                        <input type="radio" name="wood_finish" value="English Oak" class="hidden" onchange="updateSummary()" />
+                        <span class="w-6 h-6 rounded-full bg-[#8B5A2B] border border-white/40 shrink-0"></span>
+                        <span class="text-xs text-white font-medium">English Oak</span>
+                      </label>
+
+                      <label class="wood-card cursor-pointer border border-white/20 bg-secondary-container/40 p-2.5 rounded-lg flex items-center gap-2.5 opacity-80 hover:opacity-100 hover:border-white transition-all">
+                        <input type="radio" name="wood_finish" value="Antique Walnut" class="hidden" onchange="updateSummary()" />
+                        <span class="w-6 h-6 rounded-full bg-[#2C1810] border border-white/40 shrink-0"></span>
+                        <span class="text-xs text-white font-medium">Antique Walnut</span>
+                      </label>
+
+                      <label class="wood-card cursor-pointer border border-white/20 bg-secondary-container/40 p-2.5 rounded-lg flex items-center gap-2.5 opacity-80 hover:opacity-100 hover:border-white transition-all">
+                        <input type="radio" name="wood_finish" value="Piano Onyx" class="hidden" onchange="updateSummary()" />
+                        <span class="w-6 h-6 rounded-full bg-[#111111] border border-white/40 shrink-0"></span>
+                        <span class="text-xs text-white font-medium">Piano Onyx</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Cloth Color Selection -->
+                  <div class="space-y-3 mb-4">
+                    <label class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-white/90 block">
+                      Strachan 6811 Worsted Cloth Color: <span id="label-cloth-color" class="text-primary-fixed font-normal lowercase capitalize">Tournament Green</span>
+                    </label>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                      <label class="cloth-card cursor-pointer border-2 border-primary-fixed bg-primary-container p-2.5 rounded-lg flex items-center gap-2.5 transition-all">
+                        <input type="radio" name="cloth_color" value="Tournament Green" checked class="hidden" onchange="updateSummary()" />
+                        <span class="w-6 h-6 rounded-full bg-[#0b3726] border border-white/40 shrink-0"></span>
+                        <span class="text-xs text-white font-medium">Green (WPBSA)</span>
+                      </label>
+
+                      <label class="cloth-card cursor-pointer border border-white/20 bg-secondary-container/40 p-2.5 rounded-lg flex items-center gap-2.5 opacity-80 hover:opacity-100 hover:border-white transition-all">
+                        <input type="radio" name="cloth_color" value="Royal Blue" class="hidden" onchange="updateSummary()" />
+                        <span class="w-6 h-6 rounded-full bg-[#1b3b6f] border border-white/40 shrink-0"></span>
+                        <span class="text-xs text-white font-medium">Royal Blue</span>
+                      </label>
+
+                      <label class="cloth-card cursor-pointer border border-white/20 bg-secondary-container/40 p-2.5 rounded-lg flex items-center gap-2.5 opacity-80 hover:opacity-100 hover:border-white transition-all">
+                        <input type="radio" name="cloth_color" value="Burgundy Red" class="hidden" onchange="updateSummary()" />
+                        <span class="w-6 h-6 rounded-full bg-[#5c1d24] border border-white/40 shrink-0"></span>
+                        <span class="text-xs text-white font-medium">Burgundy Red</span>
+                      </label>
+
+                      <label class="cloth-card cursor-pointer border border-white/20 bg-secondary-container/40 p-2.5 rounded-lg flex items-center gap-2.5 opacity-80 hover:opacity-100 hover:border-white transition-all">
+                        <input type="radio" name="cloth_color" value="Slate Charcoal" class="hidden" onchange="updateSummary()" />
+                        <span class="w-6 h-6 rounded-full bg-[#353535] border border-white/40 shrink-0"></span>
+                        <span class="text-xs text-white font-medium">Slate Charcoal</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 2: White-Glove Delivery & Installation Details -->
+                <div class="bg-secondary-container/30 border border-white/10 p-space-md sm:p-space-lg rounded-xl">
+                  <div class="flex items-center gap-3 mb-space-sm border-b border-white/10 pb-3">
+                    <span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xs">2</span>
+                    <h2 class="font-headline-sm text-headline-sm text-white">Delivery &amp; Installation Logistics</h2>
+                  </div>
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                    <div>
+                      <label class="font-label-sm text-label-sm uppercase tracking-[0.15em] text-white/80 block mb-1">Full Name *</label>
+                      <input
+                        type="text"
+                        required
+                        placeholder="Lord / Lady / Mr. Johnathan Sterling"
+                        class="w-full bg-primary-container border border-white/20 rounded-lg px-3.5 py-2.5 text-white placeholder-white/40 focus:outline-none focus:border-primary-fixed text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label class="font-label-sm text-label-sm uppercase tracking-[0.15em] text-white/80 block mb-1">Email Address *</label>
+                      <input
+                        type="email"
+                        required
+                        placeholder="johnathan@estate.com"
+                        class="w-full bg-primary-container border border-white/20 rounded-lg px-3.5 py-2.5 text-white placeholder-white/40 focus:outline-none focus:border-primary-fixed text-sm"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                    <div>
+                      <label class="font-label-sm text-label-sm uppercase tracking-[0.15em] text-white/80 block mb-1">Phone Number *</label>
+                      <input
+                        type="tel"
+                        required
+                        placeholder="+1 (555) 345-6789"
+                        class="w-full bg-primary-container border border-white/20 rounded-lg px-3.5 py-2.5 text-white placeholder-white/40 focus:outline-none focus:border-primary-fixed text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label class="font-label-sm text-label-sm uppercase tracking-[0.15em] text-white/80 block mb-1">Room Placement Floor *</label>
+                      <select class="w-full bg-primary-container border border-white/20 rounded-lg px-3.5 py-2.5 text-white focus:outline-none focus:border-primary-fixed text-sm">
+                        <option value="ground">Ground Floor / Level Entry (Standard)</option>
+                        <option value="basement">Basement via Straight Staircase</option>
+                        <option value="first_floor">First Floor / Spiral / Turn Stairs</option>
+                        <option value="elevator">Upper Floor via Service/Freight Elevator</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="font-label-sm text-label-sm uppercase tracking-[0.15em] text-white/80 block mb-1">Delivery Street Address *</label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="100 Championship Way, Suite 400"
+                      class="w-full bg-primary-container border border-white/20 rounded-lg px-3.5 py-2.5 text-white placeholder-white/40 focus:outline-none focus:border-primary-fixed text-sm"
+                    />
+                  </div>
+
+                  <div class="grid grid-cols-3 gap-3 mb-4">
+                    <div>
+                      <label class="font-label-sm text-label-sm uppercase tracking-[0.15em] text-white/80 block mb-1">City *</label>
+                      <input
+                        type="text"
+                        required
+                        placeholder="Sheffield / New York"
+                        class="w-full bg-primary-container border border-white/20 rounded-lg px-3 py-2 text-white placeholder-white/40 focus:outline-none focus:border-primary-fixed text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label class="font-label-sm text-label-sm uppercase tracking-[0.15em] text-white/80 block mb-1">State / Region *</label>
+                      <input
+                        type="text"
+                        required
+                        placeholder="Yorkshire / NY"
+                        class="w-full bg-primary-container border border-white/20 rounded-lg px-3 py-2 text-white placeholder-white/40 focus:outline-none focus:border-primary-fixed text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label class="font-label-sm text-label-sm uppercase tracking-[0.15em] text-white/80 block mb-1">Postal Code *</label>
+                      <input
+                        type="text"
+                        required
+                        placeholder="S1 2BP / 10001"
+                        class="w-full bg-primary-container border border-white/20 rounded-lg px-3 py-2 text-white placeholder-white/40 focus:outline-none focus:border-primary-fixed text-sm"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Room Clearance Confirmation -->
+                  <div class="bg-primary-container/60 p-3 rounded-lg border border-white/10 flex items-start gap-3">
+                    <input
+                      type="checkbox"
+                      id="room-dimensions-check"
+                      required
+                      class="mt-1 w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer"
+                    />
+                    <label for="room-dimensions-check" class="text-xs text-white/90 leading-relaxed cursor-pointer">
+                      I confirm that the intended room satisfies the minimum clearance parameters (approx. 22 × 16 ft for 12ft table) for free cueing swing with standard 58" match cues.
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Step 3: Commission & Payment Structure -->
+                <div class="bg-secondary-container/30 border border-white/10 p-space-md sm:p-space-lg rounded-xl">
+                  <div class="flex items-center gap-3 mb-space-sm border-b border-white/10 pb-3">
+                    <span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xs">3</span>
+                    <h2 class="font-headline-sm text-headline-sm text-white">Payment &amp; Commission Terms</h2>
+                  </div>
+
+                  <!-- Payment Options -->
+                  <div class="space-y-3 mb-5">
+                    <label class="payment-card cursor-pointer border-2 border-primary-fixed bg-primary-container p-3.5 rounded-lg flex items-center justify-between transition-all">
+                      <div class="flex items-center gap-3">
+                        <input type="radio" name="payment_option" value="deposit" checked class="text-primary cursor-pointer" onchange="updateSummary()" />
+                        <div>
+                          <span class="text-sm font-semibold text-white block">20% Deposit Today (Remaining 80% on Delivery)</span>
+                          <span class="text-xs text-white/70">Locks in your workshop build slot; balance payable after laser installation.</span>
+                        </div>
+                      </div>
+                      <span id="deposit-amount-badge" class="font-headline-sm text-sm text-primary-fixed font-bold">$699.80 Due</span>
+                    </label>
+
+                    <label class="payment-card cursor-pointer border border-white/20 bg-secondary-container/40 p-3.5 rounded-lg flex items-center justify-between opacity-80 hover:opacity-100 hover:border-white transition-all">
+                      <div class="flex items-center gap-3">
+                        <input type="radio" name="payment_option" value="full" class="text-primary cursor-pointer" onchange="updateSummary()" />
+                        <div>
+                          <span class="text-sm font-semibold text-white block">Pay in Full (Includes Complimentary Custom Cue Engraving)</span>
+                          <span class="text-xs text-white/70">Complete commission payment today with priority workshop dispatch.</span>
+                        </div>
+                      </div>
+                      <span id="full-amount-badge" class="font-headline-sm text-sm text-white font-bold">$3,499.00</span>
+                    </label>
+
+                    <label class="payment-card cursor-pointer border border-white/20 bg-secondary-container/40 p-3.5 rounded-lg flex items-center justify-between opacity-80 hover:opacity-100 hover:border-white transition-all">
+                      <div class="flex items-center gap-3">
+                        <input type="radio" name="payment_option" value="quote" class="text-primary cursor-pointer" onchange="updateSummary()" />
+                        <div>
+                          <span class="text-sm font-semibold text-white block">In-Home Consultation / Formal Invoice Quote ($0.00 Now)</span>
+                          <span class="text-xs text-white/70">A Master Craftsman will inspect your room schematics before taking payment.</span>
+                        </div>
+                      </div>
+                      <span class="text-xs font-semibold text-primary-fixed uppercase tracking-wider">$0 Due Today</span>
+                    </label>
+                  </div>
+
+                  <!-- Card Inputs Section -->
+                  <div id="card-fields" class="space-y-3 pt-3 border-t border-white/10">
+                    <div>
+                      <label class="font-label-sm text-label-sm uppercase tracking-[0.15em] text-white/80 block mb-1">Cardholder Name *</label>
+                      <input
+                        type="text"
+                        placeholder="Johnathan Sterling"
+                        class="w-full bg-primary-container border border-white/20 rounded-lg px-3.5 py-2 text-white placeholder-white/40 focus:outline-none focus:border-primary-fixed text-sm"
+                      />
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                      <div class="sm:col-span-2">
+                        <label class="font-label-sm text-label-sm uppercase tracking-[0.15em] text-white/80 block mb-1">Card Number *</label>
+                        <input
+                          type="text"
+                          maxlength="19"
+                          placeholder="4532 •••• •••• 8921"
+                          class="w-full bg-primary-container border border-white/20 rounded-lg px-3.5 py-2 text-white placeholder-white/40 focus:outline-none focus:border-primary-fixed text-sm font-mono"
+                        />
+                      </div>
+                      <div class="grid grid-cols-2 gap-2">
+                        <div>
+                          <label class="font-label-sm text-label-sm uppercase tracking-[0.15em] text-white/80 block mb-1">Exp *</label>
+                          <input
+                            type="text"
+                            maxlength="5"
+                            placeholder="MM/YY"
+                            class="w-full bg-primary-container border border-white/20 rounded-lg px-2.5 py-2 text-white placeholder-white/40 focus:outline-none focus:border-primary-fixed text-sm text-center"
+                          />
+                        </div>
+                        <div>
+                          <label class="font-label-sm text-label-sm uppercase tracking-[0.15em] text-white/80 block mb-1">CVC *</label>
+                          <input
+                            type="password"
+                            maxlength="4"
+                            placeholder="•••"
+                            class="w-full bg-primary-container border border-white/20 rounded-lg px-2.5 py-2 text-white placeholder-white/40 focus:outline-none focus:border-primary-fixed text-sm text-center font-mono"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="pt-4 flex items-center gap-2 text-xs text-white/60">
+                    <span class="material-symbols-outlined text-sm text-primary-fixed">lock</span>
+                    <span>256-bit Bank Grade Encrypted Connection. Card information never stored unencrypted.</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Right Column: Sticky Live Order Summary & Confirmation Box -->
+              <div class="lg:col-span-5 sticky top-28 space-y-space-md">
+                
+                <div class="bg-secondary-container/40 border border-white/10 p-space-md rounded-xl shadow-2xl">
+                  
+                  <div class="border-b border-white/10 pb-3 mb-4 flex items-center justify-between">
+                    <h3 class="font-headline-sm text-headline-sm text-white">Order Summary</h3>
+                    <span class="font-label-sm text-label-sm uppercase tracking-[0.2em] bg-primary/20 text-primary-fixed px-2 py-0.5 rounded">
+                      Commission
+                    </span>
+                  </div>
+
+                  <!-- Product Mini Thumbnail & Title -->
+                  <div class="flex items-center gap-3 mb-4 pb-4 border-b border-white/10">
+                    <img
+                      alt="The Club Classic Table"
+                      class="w-20 h-14 object-cover rounded-md border border-white/20"
+                      src="table.png"
+                    />
+                    <div>
+                      <h4 class="font-headline-sm text-base text-white">The Club Classic</h4>
+                      <p id="summary-size-name" class="text-xs text-white/80">12 × 6 ft Championship Standard</p>
+                      <span class="text-[11px] text-primary-fixed">Solid English Oak &amp; 45mm Italian Slate</span>
+                    </div>
+                  </div>
+
+                  <!-- Configured Selections Breakdown -->
+                  <div class="space-y-2 text-xs mb-4 pb-4 border-b border-white/10">
+                    <div class="flex justify-between">
+                      <span class="text-white/70">Timber Finish:</span>
+                      <span id="summary-wood" class="text-white font-medium">Rich Mahogany</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-white/70">Cloth Type:</span>
+                      <span id="summary-cloth" class="text-white font-medium">Strachan 6811 (Tournament Green)</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-white/70">Pockets &amp; Hardware:</span>
+                      <span class="text-white font-medium">English Leather &amp; Solid Brass</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-white/70">Accessory Suite ($850 value):</span>
+                      <span class="text-primary-fixed font-medium">Included FREE</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-white/70">White-Glove 2-Man Assembly:</span>
+                      <span class="text-primary-fixed font-medium">Included FREE</span>
+                    </div>
+                  </div>
+
+                  <!-- Financials Breakdown -->
+                  <div class="space-y-2 text-sm mb-4">
+                    <div class="flex justify-between">
+                      <span class="text-white/80">Table Commission Base:</span>
+                      <span id="summary-base-price" class="font-mono text-white">$3,499.00</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-white/80">White-Glove Logistics &amp; Levelling:</span>
+                      <span class="text-primary-fixed font-mono">$0.00</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span class="text-white/80">Aramith 1G Ball &amp; Cue Package:</span>
+                      <span class="text-primary-fixed font-mono">$0.00</span>
+                    </div>
+                    <div class="flex justify-between pt-2 border-t border-white/15 text-base font-bold">
+                      <span class="text-white">Total Commission:</span>
+                      <span id="summary-total-price" class="font-mono text-white text-lg">$3,499.00</span>
+                    </div>
+                    <div class="flex justify-between pt-1 text-sm bg-primary-container p-2 rounded text-primary-fixed font-semibold">
+                      <span>Amount Payable Today:</span>
+                      <span id="summary-due-today" class="font-mono">$699.80</span>
+                    </div>
+                  </div>
+
+                  <!-- Submit Action Button -->
+                  <button
+                    type="submit"
+                    class="w-full inline-flex items-center justify-center gap-3 bg-secondary-container text-white font-label-lg text-label-lg uppercase tracking-[0.2em] px-8 py-4 rounded-lg hover:bg-white hover:text-on-primary transition-all duration-150 group shadow-xl"
+                  >
+                    <span id="btn-submit-text">Confirm Custom Order</span>
+                    <span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+                  </button>
+
+                  <!-- Reassurance Badges -->
+                  <div class="grid grid-cols-2 gap-2 pt-4 mt-2 border-t border-white/10 text-center">
+                    <div class="flex flex-col items-center p-2 rounded bg-primary-container/40">
+                      <span class="material-symbols-outlined text-primary-fixed text-lg">shield</span>
+                      <span class="text-[10px] uppercase tracking-wider text-white/90 font-label-sm mt-1">10-Year Warranty</span>
+                    </div>
+                    <div class="flex flex-col items-center p-2 rounded bg-primary-container/40">
+                      <span class="material-symbols-outlined text-primary-fixed text-lg">verified</span>
+                      <span class="text-[10px] uppercase tracking-wider text-white/90 font-label-sm mt-1">WPBSA Standard</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Master Craftsman Support Contact Box -->
+                <div class="bg-primary-container/60 border border-white/10 p-4 rounded-xl flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-white">support_agent</span>
+                  </div>
+                  <div>
+                    <span class="text-xs uppercase font-label-sm text-primary-fixed tracking-wider block">Bespoke Concierge</span>
+                    <p class="text-xs text-white/80 mt-0.5">
+                      Need custom architectural drawings or stairwell checks? 
+                      <strong class="text-white block">Call +1 (800) 555-CLUB</strong>
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </form>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="w-full bg-[#4A2E1B] border-t border-white/20">
+    <div class="w-full px-gutter py-space-sm flex items-center justify-center text-center">
+      <p class="font-body-sm text-body-sm text-white tracking-wider">
+        © 2025 The Club Classic. Precision Crafted Snooker Tables. Free White-Glove Installation.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Confirmation Modal -->
+  <div id="confirmation-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-secondary-container border border-white/20 p-6 sm:p-8 rounded-xl max-w-lg w-full text-center space-y-4 shadow-2xl">
+      <div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center mx-auto">
+        <span class="material-symbols-outlined text-3xl">verified</span>
+      </div>
+      <h3 class="font-headline-md text-headline-md text-white">Commission Confirmed</h3>
+      <p class="font-body-md text-body-md text-white/90 leading-relaxed">
+        Thank you for choosing <strong>The Club Classic</strong>. Your commission inquiry has been securely registered with our Sheffield workshop master builder.
+      </p>
+      <div class="bg-primary-container p-3 rounded-lg border border-white/10 text-left text-xs space-y-1 font-mono text-white/90">
+        <div><strong>Commission Ref:</strong> CC-2026-9841X</div>
+        <div id="modal-spec-text"><strong>Specification:</strong> 12 × 6 ft Championship • Rich Mahogany</div>
+        <div><strong>Estimated Workshop Dispatch:</strong> 4–6 Weeks</div>
+        <div><strong>White-Glove Installation:</strong> Complimentary (Scheduled in advance)</div>
+      </div>
+      <div class="pt-2">
+        <button
+          onclick="closeModal()"
+          class="bg-primary-container text-white px-8 py-3 rounded-lg border border-white hover:bg-white hover:text-on-primary font-label-md uppercase tracking-[0.2em] transition-all"
+        >
+          Return to Overview
+        </button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
